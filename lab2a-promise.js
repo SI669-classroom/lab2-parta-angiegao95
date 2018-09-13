@@ -27,7 +27,12 @@ function countNum(num) {
 function countBig(bignum) {
     // Add code here that returns a Promise that will resolve after it has counted to bignum
     return (new Promise((resolve, reject) => {
-        setTimeout(() => resolve(), countNum(bignum));
+        for (let i = 0; i <= bignum; i++){
+          if (i === bignum) {
+            resolve()
+          }
+        }
+        // setTimeout(() => resolve(), countNum(bignum));
     }))
 }
 
